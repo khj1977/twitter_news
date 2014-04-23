@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: kim
+Main-Class: com.gmail.eulerbonjour.app.KMeans
+Class-Path: lib/mtj-0.9.12.jar lib/netlib-java-0.9.1.jar lib/arpack_combined_all.jar

@@ -1,0 +1,201 @@
+<html>
+  <head>
+    <title>TWiS Twitter上の時事話題をあぶり出す</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Twitterで言及されている時事関連の話題を浮かび上がらせます。">
+    <meta name="keywords" content="Twitter,ツイッター,時事,分析,解析,口コミ,政治,経済">
+
+    <style TYPE="text/css">
+
+      #title_space {
+        float: left;
+        width: 100%;
+        background-color: #0D0C0C;
+        margin-bottom: 20px;
+      }
+
+
+      #outer_space {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+      }     
+
+      #my_top {
+        width: 728px;
+        float: left;
+      }
+
+      #cox {
+        margin-top: 20px;
+        float:left;
+        width: 100%;
+        background-color: #E3F1FA;
+      }
+
+      #url {
+        float:right;
+        width: 20%;
+      }
+
+
+      #ad {
+        float: left;
+        width: 100%;
+        margin-top: 30px;
+      }
+
+      #graph {
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+
+      #credit {
+        float:left;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      #pop {
+        float:left;
+        width: 100%;
+	background-color: #E3F1FA;
+      }
+
+      #news {
+        margin-top: 20px;
+        float:left;
+        width: 100%;
+	background-color: #E3F1FA;
+      }
+
+
+      #a_tweet {
+        margin-bottom: 20px;
+        float: right;
+        width: 100%;
+        background-color: #E3F1FA;
+      }
+
+
+      #tweet {
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      #user_info {
+        float:left;
+        width: 20%;
+      }
+
+      #user_tweet {
+        float:left;
+        width: 80%;
+      }
+
+      #pager {
+        float:left;
+        width: 100%;
+      }
+    </style>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18261348-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+  </head>
+
+  <body>
+    <div id = "outer_space">
+    <div id = "my_top">
+
+    <div id = "title_space">
+    <div id ="head" align = "left">
+  　　<font size="6" color="white"><b>TWiS<sup>beta</sup></b></font><br>
+    </div>
+
+    <br />  
+
+    <div id ="head" align = "right">
+  　　<font size="2" color="white">Twitter上の時事関連話題を浮かび上がらせる</font><br>
+    </div>
+    </div>
+ 
+    <br /><br />
+
+<br/>
+    <% if @popWords.size != 0 %>
+    <div id="pop">
+      <b>Pop Keywords</b><br><br>
+        <% @popWords.each do |word| %>
+          <font size="<%= word["font_size"] %>" color="<%= word["font_color"] %>"><a href=<%= @config["base_url"] + @action + "/" + word["word"] %>><%= word["word"] %></a></font>
+        <% end %>
+    </div>
+   <% end %>
+
+
+    <br><br>
+
+    <% if @searchKeys != nil %>
+    <% if @newsToShow.length != 0 %>
+    <div id="news">
+    <b>「<%= @searchKeys %>」関連URL</b><br/>
+      <% @newsToShow.each do |news| %>
+        ・<a href="<%= news["url"] %>"><font size="4"><%= news["title"] %></font></a><br />
+      <% end %>
+    </div>
+    <% end %>
+    <% end %>
+
+    <% if @searched != nil %>
+    <% if @searched.length != 0 %>
+    <div id="tweet">
+    <br><br>
+    <!--- <hr color="#0000DD" size="4"> --->
+    <b>Twitter Result of <%= @searchKeys %></b><br><br>
+    <% 
+       if @searched != nil
+       @searched.each do |selement| %>
+       <div id="a_tweet">
+         <div id="user_info">
+           <img height="60" width="60" src="<%= selement['icon'] %>">
+         </div>
+
+         <div id="user_tweet">
+           <font size="5"><%= selement["tweet"] %></font>
+           <br><br>
+         </div>
+       </div>
+    <% end 
+       end%>
+    </div>
+    <% end %>
+    <% end %>
+
+    <br/><br/>
+    <div id = "credit">
+      Made by <a href="http://twitter.com/pcaffeine">@pcaffeine</a>
+    </div>
+
+    </div>
+
+
+    </div>
+
+  </body>
+</html>
