@@ -46,7 +46,7 @@ class TheWorld
 
     @config = DefaultConfig.new.config
     @mysql = Mysql.init
-    @mysql = Mysql.real_connect(config["db_host"], config["user_name"], config["password"], config["db_name"])
+    @mysql = Mysql.real_connect(@config["db_host"], @config["user_name"], @config["password"], @config["db_name"])
   end
 
 end
