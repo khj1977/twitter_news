@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 require "com/gmail/eulerbonjour/util/E_Mecab"
 
+# これは実アプリケーションでは使われてないJSON Handler.
+# twitter_news / bin / crowler / TWSQueueClient.rbにあるTweetHandlerが
+# 使われている。
 class DefaultJsonHandler
 
   public
