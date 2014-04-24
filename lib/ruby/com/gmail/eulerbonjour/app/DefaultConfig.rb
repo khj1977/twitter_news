@@ -13,10 +13,10 @@ class DefaultConfig
       "tw_password" => "", 
       "base_url" => "", 
       "base_dir" => baseDir,
-       "consumerKey" => "", 
-       "consumerSecret" => "",
-       "accessToken" => "",
-       "accessTokenSecret" => "", 
+      "consumerKey" => "", 
+      "consumerSecret" => "",
+      "accessToken" => "",
+      "accessTokenSecret" => "", 
       "log_dir" => baseDir + "/log/"}
   end
 
