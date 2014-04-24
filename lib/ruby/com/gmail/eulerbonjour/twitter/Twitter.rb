@@ -57,6 +57,7 @@ class Twitter
           begin
             parsed = JSON.parse(body)
           rescue => ex
+            # quick hack
             next
           end
 
