@@ -23,14 +23,7 @@ class TWNewsFlusher < BaseApp
     AMQP.start(:host => 'localhost' ) do
       q = MQ.new.queue('tw_news_dev')
       q.subscribe do |rawMsg|
-        # debug
-        # Using unserialize, convert rawMsg to msg which is 
-        # Ruby Object representing hash.
-        # end of debug
 
-        # msg = Marshal.load(rawMsg)
-        # tweetId = msg["tweet_id"]
-        # tweet = msg["tweet"]
         msg = rawMsg.split("::::")
         tweetId = msg[0]
         tweet = msg[1]
@@ -38,11 +31,6 @@ class TWNewsFlusher < BaseApp
         geo2 = msg[3]
         icon = msg[4]
 
-        # debug
-        # puts tweet
-        # end of debug
-
-        # insert tweet
         tweetBuffer.push(tweetId, tweet, geo1, geo2, icon)
 
         mecab.parse(tweet) do |kked|
