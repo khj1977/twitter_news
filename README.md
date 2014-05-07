@@ -11,3 +11,11 @@ Web系、クローラーはRubyで書かれている。
 Streaming API => クローラー(永続プロセス) => MQ => 各種処理(永続プロセス)
 
 というイメージ。各種処理では例えば、DB insertの高速化のために、MQからのデータをある程度まとめてbulk insertをするなどしている。
+
+以下にクラスタリングされた単語の例を示す。
+
+[example1](https://github.com/pcaffeine/algorithm/blob/master/twitter-analysis/example/191072099.png)
+[example2](https://github.com/pcaffeine/algorithm/blob/master/twitter-analysis/example/191635883.png)
+[example3](https://github.com/pcaffeine/algorithm/blob/master/twitter-analysis/example/191683773.png)
+[example4](https://github.com/pcaffeine/algorithm/blob/master/twitter-analysis/example/192037905.png)
+[example5](https://github.com/pcaffeine/algorithm/blob/master/twitter-analysis/example/192041281.png)
