@@ -14,15 +14,14 @@ twitter = Twitter.new(config["tw_user_name"], config["tw_password"])
 wordID = 0
 tweetID = 0
 
-while true
-  handler = TweetHandler.new(wordID, tweetID)
-  begin
-    twitter.queuingHandleSampleStream(handler)
-  rescue => ex
-    puts ex
-
-    exit
-  ensure
-    handler.close
-  end
+handler = TweetHandler.new(wordID, tweetID)
+begin
+  twitter.queuingHandleSampleStream(handler)
+rescue => ex
+  puts ex
+  
+  exit
+ensure
+  handler.close
 end
+
