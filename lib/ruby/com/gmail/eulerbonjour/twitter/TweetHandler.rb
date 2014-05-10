@@ -60,14 +60,12 @@ class TweetHandler
       return
     end
 
-    # debug
     if geo != nil
       geo = geo["coordinates"]
       geo = geo[0].to_s + "::::" + geo[1].to_s
     else
       geo = "null::::null"
     end
-    # end of debug
 
     if tweetText == nil || tweetText == nil || userID == nil || screenName == nil || userImage == nil || createTime == nil
       return
@@ -77,12 +75,8 @@ class TweetHandler
       return
     end
 
-    # debug
-    # put access to twitter api inside this block?
-    # end of debug
     AMQP.start(:host => 'localhost') do
       channel = AMQP::Channel.new.queue("tw_news_dev")
-      # channel.publish(Marshal.dump({"tweet_id" => @tweetID, "tweet" => tweetText}))
       channel.publish(@tweetID + "::::" + tweetText + "::::" + geo + "::::" + userImage)
       
       if self.isURL(tweetText)
@@ -94,7 +88,7 @@ class TweetHandler
       end
       AMQP.stop {EM.stop}
     end    
-    puts tweetText
+    # puts tweetText
     
     return
   end

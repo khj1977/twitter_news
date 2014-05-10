@@ -3,7 +3,7 @@
 
 # require "mysql"
 require "com/gmail/eulerbonjour/twitter/Twitter"
-require "com/gmail/eulerbonjour/twitter/TwitterHandler"
+require "com/gmail/eulerbonjour/twitter/TweetHandler"
 require "com/gmail/eulerbonjour/app/DefaultConfig"
 
 $KCODE="u"
