@@ -1,3 +1,4 @@
+# -*- coding: undecided -*-
 require 'net/http'
 require 'uri'
 require 'rubygems'
@@ -42,6 +43,9 @@ class Twitter
 
   end
 
+  # Tweetを受け取って実際にどういう処理をするかはjsonTweetHandler
+  # 次第。拡張性を持たせるためにわざとjsonTweetHandlerとこのメソッドを
+  # 分離している。
   def queuingHandleSampleStream(jsonTweetHandler)
     uri = URI.parse("http://stream.twitter.com/1/statuses/sample.json")
     Net::HTTP.start(uri.host, uri.port) do |http|
