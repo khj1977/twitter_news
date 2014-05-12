@@ -19,3 +19,6 @@ Streaming API => クローラー(永続プロセス) => MQ => 各種処理(永�
 [example3](https://github.com/pcaffeine/algorithm/blob/master/twitter-analysis/example/191683773.png)
 [example4](https://github.com/pcaffeine/algorithm/blob/master/twitter-analysis/example/192037905.png)
 [example5](https://github.com/pcaffeine/algorithm/blob/master/twitter-analysis/example/192041281.png)
+
+この例では単語をクラスタリングしているが、例えばあるサービス内で十分なユーザーの行動のログなどがあればユーザーのクラスタリングも行えると思われる。したがって、Webサービスのデータマイニングにも有用だと思われる。
+
