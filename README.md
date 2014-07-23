@@ -12,6 +12,8 @@ Streaming API => クローラー(永続プロセス) => MQ => 各種処理(永�
 
 というイメージ。各種処理では例えば、DB insertの高速化のために、MQからのデータをある程度まとめてbulk insertをするなどしている。
 
+収集されたデータを元にLSAとkmeansで単語をクラスタリングしている。
+
 以下にクラスタリングされた単語の例を示す。
 
 [example1](https://github.com/pcaffeine/algorithm/blob/master/twitter-analysis/example/191072099.png)
