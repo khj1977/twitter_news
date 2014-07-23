@@ -1,6 +1,8 @@
 # Twitter上の単語分類とWeb UI、Crowler
 
-tweetをstreaming API(garden hose level以上)で取得して時事関連単語を自動抽出する。自動抽出にはLSAとkmeansを使用している。
+tweetをstreaming API(garden hose level以上)で取得して時事関連単語を自動抽出する。自動抽出にはLSAとkmeansを使用している。自動抽出の一例を下記に示す。
+
+[example1](https://github.com/pcaffeine/algorithm/blob/master/twitter-analysis/example/191072099.png)
 
 Web系のコードは量が少なくてシンプルなので、sinatraを使っている。クローラーは正確にはstreaming apiにアクセスして、もろもろの処理をしている。また、クローラーはバッチ処理で、特にフレームワークは使用していない。バッチ処理はデータ量がそれなりに多くても、うまくさばけるように設計されている。
 
