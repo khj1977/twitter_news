@@ -1,6 +1,6 @@
 # Twitter上の単語分類とWeb UI、Crowler
 
-tweetをstreaming API(garden hose level以上)で取得して時事関連単語を自動抽出する。自動抽出にはLSA(bin/svd/)とkmeans(bin/kmeans/)を使用している。自動抽出の一例を下記に示す。
+tweetをstreaming API(garden hose level以上)で取得して時事関連単語を自動抽出する。自動抽出にはLSA(bin/svd/)とkmeans(bin/kmeans/)を使用している。使用しているアルゴリズムはデータマイニングでのクラスタリングでも有用だと思われる。自動抽出の一例を下記に示す。
 
 [example1](https://github.com/pcaffeine/algorithm/blob/master/twitter-analysis/example/191072099.png)
 
