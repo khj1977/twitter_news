@@ -4,7 +4,7 @@ require 'rubygems'
 require 'amqp'
 require 'mq'
 require "com/gmail/eulerbonjour/app/BaseApp"
-require "com/gmail/eulerbonjour/conf/DefaultConfig"
+require "conf/DefaultConfig"
 require "com/gmail/eulerbonjour/util/Util"
 require "mysql"
 

@@ -1,6 +1,6 @@
 require "mysql"
 require "jcode"
-require "com/gmail/eulerbonjour/conf/DefaultConfig"
+require "conf/DefaultConfig"
 
 $KCODE = "u"
 

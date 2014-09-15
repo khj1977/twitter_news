@@ -1,5 +1,5 @@
 require "com/gmail/eulerbonjour/util/DebugStream"
-require "com/gmail/eulerbonjour/conf/DefaultConfig"
+require "conf/DefaultConfig"
 require "com/gmail/eulerbonjour/util/Logger"
 require "mysql"
 

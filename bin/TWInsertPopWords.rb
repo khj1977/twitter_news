@@ -1,7 +1,7 @@
 #!/usr/local/bin/ruby
 
 require "com/gmail/eulerbonjour/app/BaseApp"
-require "com/gmail/eulerbonjour/conf/DefaultConfig"
+require "conf/DefaultConfig"
 require "date"
 
 class TWInsertPopWords < BaseApp

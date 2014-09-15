@@ -1,4 +1,4 @@
-require "com/gmail/eulerbonjour/conf/DefaultConfig"
+require "conf/DefaultConfig"
 
 class Logger
 

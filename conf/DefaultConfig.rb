@@ -9,6 +9,7 @@ class DefaultConfig
       "user_name" => "", 
       "password" => "", 
       "db_name" => "", 
+      # for old twitter API
       "tw_user_name" => "", 
       "tw_password" => "", 
       "base_url" => "", 

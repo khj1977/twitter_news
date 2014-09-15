@@ -2,7 +2,7 @@
 
 require "com/gmail/eulerbonjour/twitter/TwitterOrdinaryAPI"
 require "com/gmail/eulerbonjour/app/BaseApp"
-require "com/gmail/eulerbonjour/conf/DefaultConfig"
+require "conf/DefaultConfig"
 
 class FetchMyTweets < BaseApp
   def exec
