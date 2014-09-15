@@ -1,7 +1,7 @@
 #!/usr/local/bin/ruby
 
 require "com/gmail/eulerbonjour/app/BaseApp"
-require "com/gmail/eulerbonjour/app/DefaultConfig"
+require "com/gmail/eulerbonjour/conf/DefaultConfig"
 require "date"
 
 class TWAddPartition < BaseApp

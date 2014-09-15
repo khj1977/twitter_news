@@ -5,7 +5,7 @@ require 'rubygems'
 require 'amqp'
 require 'mq'
 require "com/gmail/eulerbonjour/app/BaseApp"
-require "com/gmail/eulerbonjour/app/DefaultConfig"
+require "com/gmail/eulerbonjour/conf/DefaultConfig"
 require "com/gmail/eulerbonjour/util/TWInvIndexBuffer"
 require "com/gmail/eulerbonjour/util/TWTweetBuffer"
 require "com/gmail/eulerbonjour/util/E_Mecab"

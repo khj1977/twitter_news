@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'oauth'
 require 'json'
-require "com/gmail/eulerbonjour/app/DefaultConfig"
+require "com/gmail/eulerbonjour/conf/DefaultConfig"
 
 class TwitterOrdinaryAPI
 
