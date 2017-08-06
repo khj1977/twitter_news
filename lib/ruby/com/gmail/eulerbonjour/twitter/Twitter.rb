@@ -13,6 +13,7 @@ class Twitter
     @locker = Mutex::new
   end
 
+  # The base of the following code may be came from sample code at a blog of CNET, written by Ejia Kentaro.
   def handleSampleStream(jsonTweetHandler)
     uri = URI.parse("http://stream.twitter.com/1/statuses/sample.json")
     Net::HTTP.start(uri.host, uri.port) do |http|
